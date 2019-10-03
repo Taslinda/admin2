@@ -7,26 +7,26 @@ import Swal from 'sweetalert2';
 import EditSoal from './EditSoal/EditSoal';
 
 class Pertanyaan extends Component {
-  constructor (props) {
-    super (props);
-    this.sweetalertfunction = this.sweetalertfunction.bind (this);
-  }
-  sweetalertfunction () {
-    console.log ('button clicks');
-    Swal.fire ({
-      title: 'Apakah Anda yakin?',
-      text: 'Anda tidak dapat mengembalikan data yang telah dihapus!',
-      type: 'warning',
-      showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Ya',
-    }).then (result => {
-      if (result.value) {
-        Swal.fire ('Dihapus!', 'Data Anda telah dihapus.', 'success');
+      constructor (props) {
+        super (props);
+        this.sweetalertfunction = this.sweetalertfunction.bind (this);
       }
-    });
-  }
+      sweetalertfunction () {
+        console.log ('button clicks');
+        Swal.fire ({
+          title: 'Apakah Anda yakin?',
+          text: 'Anda tidak dapat mengembalikan data yang telah dihapus!',
+          type: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Ya',
+        }).then (result => {
+          if (result.value) {
+            Swal.fire ('Dihapus!', 'Data Anda telah dihapus.', 'success');
+          }
+        });
+      }
   render () {
     return (
       <div className="pertanyaan-app">
